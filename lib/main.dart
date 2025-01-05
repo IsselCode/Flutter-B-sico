@@ -1,6 +1,9 @@
+import 'package:example/screens/dashboard_screen.dart';
 import 'package:example/screens/edit_screen.dart';
 import 'package:example/screens/home_page.dart';
+import 'package:example/screens/login_screen.dart';
 import 'package:example/screens/second_page.dart';
+import 'package:example/screens/welcome_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,11 +24,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const HomePage()
-      initialRoute: "/edit-screen",
+      initialRoute: "/",
       routes: {
-        "/": (context) => const HomePage(),
-        "/second": (context) => const SecondPage(),
-        "/edit-screen": (context) => const EditScreen()
+        "/": (context) => const WelcomeScreen(), // pushReplacement
+        "/login": (context) => const LoginScreen(), // pushAndRemoveUntil
+        "/dashboard": (context) => const DashboardScreen() // popUntil
       },
     );
   }
