@@ -21,7 +21,9 @@ class ButtonsTypesGroupWidget extends StatelessWidget {
 
         ElevatedButtonWidget(
           text: "Elevated",
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           enabled: enabled
         ),
 
