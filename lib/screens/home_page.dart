@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
             //   MaterialPageRoute(builder: (context) => const SecondPage(),)
             // );
 
-            final resultado = await Navigator.pushNamed(context, "/second");
+            final resultado = await Navigator.pushNamed(context, "/edit-screen");
 
             print("Resultado recibido: $resultado");
 

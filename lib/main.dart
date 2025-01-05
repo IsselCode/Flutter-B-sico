@@ -1,7 +1,6 @@
+import 'package:example/screens/edit_screen.dart';
 import 'package:example/screens/home_page.dart';
-import 'package:example/screens/sample_buttons_screen.dart';
 import 'package:example/screens/second_page.dart';
-import 'package:example/widgets_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,10 +21,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       // home: const HomePage()
-      initialRoute: "/",
+      initialRoute: "/edit-screen",
       routes: {
         "/": (context) => const HomePage(),
-        "/second": (context) => const SecondPage()
+        "/second": (context) => const SecondPage(),
+        "/edit-screen": (context) => const EditScreen()
       },
     );
   }
