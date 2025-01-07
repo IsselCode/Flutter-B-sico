@@ -4,6 +4,7 @@ import 'package:example/screens/home_page.dart';
 import 'package:example/screens/login_screen.dart';
 import 'package:example/screens/second_page.dart';
 import 'package:example/screens/welcome_screen.dart';
+import 'package:example/screens/widgets_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,13 +24,13 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      // home: const HomePage()
-      initialRoute: "/",
-      routes: {
-        "/": (context) => const WelcomeScreen(), // pushReplacement
-        "/login": (context) => const LoginScreen(), // pushAndRemoveUntil
-        "/dashboard": (context) => const DashboardScreen() // popUntil
-      },
+      home: const WidgetsScreen()
+      // initialRoute: "/",
+      // routes: {
+      //   "/": (context) => const WelcomeScreen(), // pushReplacement
+      //   "/login": (context) => const LoginScreen(), // pushAndRemoveUntil
+      //   "/dashboard": (context) => const DashboardScreen() // popUntil
+      // },
     );
   }
 }
