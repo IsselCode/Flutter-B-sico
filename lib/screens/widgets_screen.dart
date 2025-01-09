@@ -14,13 +14,17 @@ class WidgetsScreen extends StatelessWidget {
         children: [
 
           ListTile(
-            leading: Icon(Icons.star),
-            title: Text("List View Builder"),
+            leading: const Icon(Icons.star),
+            title: const Text("List View Builder"),
             onTap: () {
 
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SelectedWidgetScreen(child: ListViewBuilderWidget()),)
+                MaterialPageRoute(builder: (context) {
+                  return const SelectedWidgetScreen(
+                    text: 'List View Builder',
+                    child: ListViewBuilderWidget());
+                },)
               );
 
             },
@@ -29,15 +33,16 @@ class WidgetsScreen extends StatelessWidget {
           const Divider(),
 
           ListTile(
-            leading: Icon(Icons.star),
-            title: Text("List View Separated"),
+            leading: const Icon(Icons.star),
+            title: const Text("List View Separated"),
             onTap: () {
 
               Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
                     return const SelectedWidgetScreen(
-                      child: ListViewSeparatedWidget()
+                      text: "List View Separated",
+                      child: ListViewSeparatedWidget(),
                     );
                   },)
               );
@@ -56,7 +61,8 @@ class WidgetsScreen extends StatelessWidget {
                   context,
                   MaterialPageRoute(builder: (context) {
                     return const SelectedWidgetScreen(
-                      child: ContainerWidget()
+                      text: "Container",
+                      child: ContainerWidget(),
                     );
                   },)
               );
