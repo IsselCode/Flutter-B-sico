@@ -1,5 +1,6 @@
 import 'package:example/screens/selected_widget_screen.dart';
 import 'package:example/widgets/container_widget.dart';
+import 'package:example/widgets/expanded_flexible_widget.dart';
 import 'package:example/widgets/list_view_builder_widget.dart';
 import 'package:example/widgets/list_view_separated_widget.dart';
 import 'package:example/widgets/stack_widget.dart';
@@ -84,6 +85,26 @@ class WidgetsScreen extends StatelessWidget {
                     return const SelectedWidgetScreen(
                       text: "Stack",
                       child: StackWidget(),
+                    );
+                  },)
+              );
+
+            },
+          ),
+
+          const Divider(),
+
+          ListTile(
+            leading: const Icon(Icons.star),
+            title: const Text("Expanded & Flexible"),
+            onTap: () {
+
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const SelectedWidgetScreen(
+                      text: "Expanded & Flexible",
+                      child: ExpandedFlexibleWidget(),
                     );
                   },)
               );
