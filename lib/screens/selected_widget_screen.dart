@@ -14,6 +14,7 @@ class SelectedWidgetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // backgroundColor: Colors.orange,
       appBar: AppBar(
         backgroundColor: Colors.blue,
         title: Text(text),

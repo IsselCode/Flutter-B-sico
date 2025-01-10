@@ -1,4 +1,5 @@
 import 'package:example/screens/selected_widget_screen.dart';
+import 'package:example/widgets/card_widget.dart';
 import 'package:example/widgets/container_widget.dart';
 import 'package:example/widgets/expanded_flexible_widget.dart';
 import 'package:example/widgets/gridview_widget.dart';
@@ -126,6 +127,26 @@ class WidgetsScreen extends StatelessWidget {
                     return const SelectedWidgetScreen(
                       text: "GridView",
                       child: GridviewWidget(),
+                    );
+                  },)
+              );
+
+            },
+          ),
+
+          const Divider(),
+
+          ListTile(
+            leading: const Icon(Icons.star),
+            title: const Text("Card"),
+            onTap: () {
+
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const SelectedWidgetScreen(
+                      text: "Card",
+                      child: CardWidget(),
                     );
                   },)
               );
